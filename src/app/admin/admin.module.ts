@@ -5,6 +5,8 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { ProductoComponent } from './producto/producto.component';
 import { ProveedorComponent } from './proveedor/proveedor.component';
 import { AdminRoutingModule } from './admin-routing.module';
+import { MaterialModule } from './material/material.module';
+import { NavegacionComponent } from './componentes/navegacion/navegacion.component';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { AdminRoutingModule } from './admin-routing.module';
     CategoriaComponent,
     ProductoComponent,
     ProveedorComponent,
+    NavegacionComponent,
   ],
-  imports: [CommonModule, AdminRoutingModule],
+  imports: [CommonModule, AdminRoutingModule, MaterialModule],
 })
 export class AdminModule {}
