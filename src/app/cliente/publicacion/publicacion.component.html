@@ -1,1 +1,23 @@
 <p>publicacion works!</p>
+<!--p>{{ publicaciones | json }}</p-->
+
+<table border=1>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>DESCRIPCION</th>
+            <th>ACCIONES</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let publi of publicaciones">
+         
+                <th>{{publi.id}}</th>
+                <th>{{publi.title}}</th>
+                <th>{{publi.completed}}</th>
+                <th>ACCIONES</th>
+           
+        </tr>
+    </tbody>
+</table>
