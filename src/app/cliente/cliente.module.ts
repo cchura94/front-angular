@@ -6,6 +6,7 @@ import { PublicacionComponent } from './publicacion/publicacion.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { LoginComponent } from './login/login.component';
 import { ClienteRoutingModule } from './cliente-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,6 @@ import { ClienteRoutingModule } from './cliente-routing.module';
     ContactoComponent,
     LoginComponent,
   ],
-  imports: [CommonModule, ClienteRoutingModule],
+  imports: [CommonModule, ClienteRoutingModule, ReactiveFormsModule],
 })
 export class ClienteModule {}
