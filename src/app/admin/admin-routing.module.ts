@@ -5,6 +5,9 @@ import { AdminComponent } from './admin.component';
 import { ProductoComponent } from './producto/producto.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { ProveedorComponent } from './proveedor/proveedor.component';
+import { CategoriaListarComponent } from './categoria/categoria-listar/categoria-listar.component';
+import { CategoriaCrearComponent } from './categoria/categoria-crear/categoria-crear.component';
+import { CategoriaModificarComponent } from './categoria/categoria-modificar/categoria-modificar.component';
 
 const routes: Routes = [
   {
@@ -18,6 +21,20 @@ const routes: Routes = [
       {
         path: 'categoria',
         component: CategoriaComponent,
+        children: [
+          {
+            path: '',
+            component: CategoriaListarComponent,
+          },
+          {
+            path: 'nuevo',
+            component: CategoriaCrearComponent,
+          },
+          {
+            path: ':id/editar',
+            component: CategoriaModificarComponent,
+          },
+        ],
       },
       {
         path: 'proveedor',

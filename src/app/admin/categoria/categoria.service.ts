@@ -16,24 +16,37 @@ export class CategoriaService {
 
     this.headers = new HttpHeaders({
       'Content-Type': 'application/json; charset=utf-8',
-      'Authorization': 'Bearer ' + token,
+      Authorization: 'Bearer ' + token,
     });
   }
 
   listar() {
-    return this.http.get(this.url_base+"/categoria", { headers: this.headers });
+    return this.http.get(this.url_base + '/categoria', {
+      headers: this.headers,
+    });
   }
 
-  guardar(datos){
-    return this.http.post(this.url_base+"/categoria", datos, { headers: this.headers });
+  guardar(datos) {
+    return this.http.post(this.url_base + '/categoria', datos, {
+      headers: this.headers,
+    });
   }
 
-  modificar(id, datos){
-    return this.http.put(this.url_base+"/categoria/"+id, datos, { headers: this.headers });
+  mostrar(id) {
+    return this.http.get(this.url_base + '/categoria/' + id, {
+      headers: this.headers,
+    });
   }
 
-  eliminar(id){
-    return this.http.delete(this.url_base+"/categoria/"+id, { headers: this.headers });
+  modificar(id, datos) {
+    return this.http.put(this.url_base + '/categoria/' + id, datos, {
+      headers: this.headers,
+    });
   }
 
+  eliminar(id) {
+    return this.http.delete(this.url_base + '/categoria/' + id, {
+      headers: this.headers,
+    });
+  }
 }

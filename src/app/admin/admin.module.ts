@@ -7,6 +7,10 @@ import { ProveedorComponent } from './proveedor/proveedor.component';
 import { AdminRoutingModule } from './admin-routing.module';
 import { MaterialModule } from './material/material.module';
 import { NavegacionComponent } from './componentes/navegacion/navegacion.component';
+import { CategoriaListarComponent } from './categoria/categoria-listar/categoria-listar.component';
+import { CategoriaCrearComponent } from './categoria/categoria-crear/categoria-crear.component';
+import { CategoriaModificarComponent } from './categoria/categoria-modificar/categoria-modificar.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,15 @@ import { NavegacionComponent } from './componentes/navegacion/navegacion.compone
     ProductoComponent,
     ProveedorComponent,
     NavegacionComponent,
+    CategoriaListarComponent,
+    CategoriaCrearComponent,
+    CategoriaModificarComponent,
   ],
-  imports: [CommonModule, AdminRoutingModule, MaterialModule],
+  imports: [
+    CommonModule,
+    AdminRoutingModule,
+    MaterialModule,
+    ReactiveFormsModule,
+  ],
 })
 export class AdminModule {}
