@@ -1,13 +1,28 @@
-<h1>Inicio de Sesion</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
 
-<form [formGroup] = "loginForm">
-    <label for="">Ingrese su correo:</label>
-    <input type="email" formControlName="email">
-    <br>
-    <label for="">Ingrese su clave:</label>
-    <input type="password" formControlName="password">
-    <br>
-    <input type="button" value="Ingresar" [disabled] ="!loginForm.valid" (click)="ingresar()">
-</form>
+        <div class="col-md-6">
+            <h1>Inicio de Sesion</h1>
 
-<p>{{ loginForm.value | json }}</p>
+            <form [formGroup] = "loginForm">
+            
+                <div class="form-group">
+                <label for="exampleInputEmail1">Ingrese su correo:</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+                <small id="emailHelp" class="form-text text-muted">Ingrese correo electronico</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Ingrese su Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+              </div>
+              <button type="submit" class="btn btn-primary" [disabled] ="!loginForm.valid" (click)="ingresar()">INGRESAR</button>
+            
+            </form>
+
+            <p>{{ loginForm.value | json }}</p>
+        </div>
+    </div>
+
+</div>
+

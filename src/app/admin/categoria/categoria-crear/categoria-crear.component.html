@@ -12,6 +12,6 @@
           <textarea matInput placeholder="Ingrese descripcion de la categoria" formControlName="descripcion"></textarea>
         </mat-form-field>
 
-        <button (click)="guardar()">Registrar Categoria</button>
+        <button (click)="guardar()" mat-raised-button color="primary" [disabled]="!categoriaForm.valid">Registrar Categoria</button>
       </form>
 </mat-card>
